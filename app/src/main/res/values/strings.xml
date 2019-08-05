@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Android UDF Boilerplate</string>
+    <string name = "loading" >Loading</string >
+</resources>

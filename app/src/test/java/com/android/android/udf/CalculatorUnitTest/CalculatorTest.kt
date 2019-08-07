@@ -63,4 +63,10 @@ class CalculatorTest {
         assertAsyncSuccess(calTestActivity, 5, calTestActivity.calcResult)
     }
 
+    @Test
+    fun calAddNegativeNumThrowError() {
+        assertEquals(5, calTestActivity.calcResult)
+        calTestActivity.addNumber(-1)
+        assertAsyncError(calTestActivity, ApiError(500, "Can not add negative number"), calTestActivity.calLastError!!)
+    }
 }

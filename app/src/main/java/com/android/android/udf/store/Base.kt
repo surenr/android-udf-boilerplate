@@ -27,13 +27,13 @@ interface  Base : StoreSubscriber<AppState> {
     }
 
     fun showLoader() {
-        Log.i("show loader", "Loader Shown")
+       //  Log.i("show loader", "Loader Shown")
     }
 
     fun hideLoader() {
         val handler = Handler()
         handler.postDelayed({
-           Log.i("hide loader", "Loader Hidden")
+          // Log.i("hide loader", "Loader Hidden")
         }, 50)
     }
 

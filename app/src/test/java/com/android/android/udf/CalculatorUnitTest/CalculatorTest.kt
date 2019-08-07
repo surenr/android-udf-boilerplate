@@ -69,4 +69,12 @@ class CalculatorTest {
         calTestActivity.addNumber(-1)
         assertAsyncError(calTestActivity, ApiError(500, "Can not add negative number"), calTestActivity.calLastError!!)
     }
+
+    @Test
+    fun calcSubtract() {
+        assertEquals(5, calTestActivity.calcResult)
+        calTestActivity.subtractNumber(3)
+        assertAsyncSuccess(calTestActivity, 2, calTestActivity.calcResult)
+    }
+
 }

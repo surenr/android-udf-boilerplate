@@ -6,6 +6,6 @@ import org.rekotlin.Store
 
 val appStore = Store(
     reducer = ::appReducers,
-    state = null //,
-    // middleware = listOf(NetworkMiddleware)
+    state = null,
+    middleware = listOf(NetworkMiddleware)
 )

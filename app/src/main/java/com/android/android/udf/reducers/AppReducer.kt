@@ -2,6 +2,7 @@ package com.android.android.udf.reducers
 
 import com.android.android.udf.Actions.BaseAction
 import com.android.android.udf.Actions.CalcAdd
+import com.android.android.udf.Actions.CalcSubtract
 import com.android.android.udf.state.AppState
 import org.rekotlin.Action
 
@@ -22,8 +23,10 @@ fun appReducers(action: Action, state: AppState?): AppState {
 
     when (action) {
         is CalcAdd -> {
-            val newState =  calcAddReducer(action, state)
-            return newState
+            return calcAddReducer(action, state)
+        }
+        is CalcSubtract -> {
+            return calcSubtractReducer(action, state)
         }
     }
     return state

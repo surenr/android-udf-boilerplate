@@ -13,3 +13,13 @@ sealed class CalcSubtract(baseId: String? = "", actionStatus: ActionStatus? = Ac
     class Perform(val sourceInt: Int, val numToSubtract: Int, actionId: String?):  CalcSubtract(baseId = actionId, actionStatus = ActionStatus.INIT)
     class Success(actionId: String?):  CalcSubtract(baseId = actionId, actionStatus = ActionStatus.COMPLETED)
 }
+
+sealed class CalcMultiply(baseId: String? = "", actionStatus: ActionStatus? = ActionStatus.INIT, error: ApiError? = null): BaseAction(baseId, actionStatus, error) {
+    class Perform(val sourceInt: Int, val numToMultiply: Int, actionId: String?):  CalcMultiply(baseId = actionId, actionStatus = ActionStatus.INIT)
+    class Success(actionId: String?):  CalcMultiply(baseId = actionId, actionStatus = ActionStatus.COMPLETED)
+}
+
+sealed class CalcDivide(baseId: String? = "", actionStatus: ActionStatus? = ActionStatus.INIT, error: ApiError? = null): BaseAction(baseId, actionStatus, error) {
+    class Perform(val sourceInt: Int, val numToDivide: Int, actionId: String?):  CalcDivide(baseId = actionId, actionStatus = ActionStatus.INIT)
+    class Success(actionId: String?):  CalcDivide(baseId = actionId, actionStatus = ActionStatus.COMPLETED)
+}

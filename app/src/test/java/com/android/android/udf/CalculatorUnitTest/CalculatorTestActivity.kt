@@ -1,8 +1,6 @@
 package com.android.android.udf.CalculatorUnitTest
 
-import com.android.android.udf.Actions.BaseAction
-import com.android.android.udf.Actions.CalcAdd
-import com.android.android.udf.Actions.CalcSubtract
+import com.android.android.udf.Actions.*
 import com.android.android.udf.domain.ApiError
 import com.android.android.udf.state.AppState
 import com.android.android.udf.state.getCalResult
@@ -17,10 +15,10 @@ class CalculatorTestActivity : Base {
     var calLastError: ApiError? = null
     override fun onStateUpdate(state: AppState, action: BaseAction): Boolean {
         when(action){
-            is CalcAdd ->{
-                calcResult = getCalResult(state)
-            }
+           // TODO: handle specific actions and update the activity as needed
+
         }
+        calcResult = getCalResult(state)
         return true
     }
 
@@ -35,4 +33,13 @@ class CalculatorTestActivity : Base {
     fun subtractNumber(num: Int) {
         dispatchAction(CalcSubtract.Perform(calcResult, num, getActionId()))
     }
+
+    fun multiplyNumber(num: Int) {
+        dispatchAction(CalcMultiply.Perform(calcResult, num, getActionId()))
+    }
+
+    fun divideNumber(num: Int) {
+        dispatchAction(CalcDivide.Perform(calcResult, num, getActionId()))
+    }
+
 }

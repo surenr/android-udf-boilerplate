@@ -5,7 +5,6 @@ import android.util.Log
 import com.android.android.udf.Actions.*
 import com.android.android.udf.R
 import com.android.android.udf.state.AppState
-import com.android.android.udf.state.getCalResult
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : BaseActivity() {
@@ -13,7 +12,6 @@ class MainActivity : BaseActivity() {
         when(action){
            // TODO: Handle any special actions here
         }
-        calResult.text = getCalResult(state).toString()
         return true
     }
 

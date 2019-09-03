@@ -20,21 +20,21 @@ fun appReducers(action: Action, state: AppState?): AppState {
     val appState = state ?: AppState()
 
     when (action) {
-        is CalcAdd -> {
-            return calcAddReducer(action, appState)
-        }
-        is CalcSubtract -> {
-            return calcSubtractReducer(action, appState)
-        }
-        is CalcMultiply -> {
-            return calcMultiplyReducer(action, appState)
-        }
-        is CalcDivide -> {
-            return calcDivideReducer(action, appState)
-        }
-        is RemoveStateStatus -> {
-            return removeStateStatus(action, appState)
-        }
+//        is CalcAdd -> {
+//            return calcAddReducer(action, appState)
+//        }
+//        is CalcSubtract -> {
+//            return calcSubtractReducer(action, appState)
+//        }
+//        is CalcMultiply -> {
+//            return calcMultiplyReducer(action, appState)
+//        }
+//        is CalcDivide -> {
+//            return calcDivideReducer(action, appState)
+//        }
+//        is RemoveStateStatus -> {
+//            return removeStateStatus(action, appState)
+//        }
     }
     return appState
 }
